@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		width:900px;
+		/*가운데로 옮기기*/
+		margin-left:auto; 
+		margin-right:auto; 
+		}
+
+	header{
+		background-color: red;
+		height: 100px;
+	}
+	
+	aside{
+		background-color: green;
+		height: 600px;
+		/*반응형 웹의 기본이 크기를 %로 잡는 것임*/
+		width: 30%;
+		/*folat는 정렬을 위해 사용되는 속성*/
+		float: left;
+	}
+	
+	section{
+		background-color: pink;
+		height: 600px;
+		width: 70%;
+		float: right;
+	}
+	
+	footer{
+	 background-color: orange;
+	 height: 100px;
+	 /*aside와 section을 float로 띄우면, footer가 사라짐 float 속성 때문에 옆으로 붙어버린 것,  clear */
+	 clear: both;
+	}
+	
+	
+</style>
+</head>
+
+
+<body>
+	<header>헤더부분</header>
+	<aside>aside부분</aside>
+	<section>section부분</section>
+	<footer>footer부분</footer>
+
+</body>
+</html>

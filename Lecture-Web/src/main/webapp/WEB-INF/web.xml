@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Lecture-Web</display-name>
+  
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>kr.ac.kopo.servlet.HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello</url-pattern>  <!--xml에서의 '/'(슬래쉬는 http://localhost:9999/Lecture-Web'/'여기를 의미함), 가상의 URL  -->
+  </servlet-mapping>  <!--http://localhost:9999/Lecture-Web/(hello)kr.ac.kopo.servlet.HelloServlet 경로 -->
+
+
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hi</url-pattern>  <!-- 1대다로 매핑될 수 있음! -->
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>method</servlet-name>
+  	<servlet-class>kr.ac.kopo.servlet.MethodServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>method</servlet-name>
+  	<url-pattern>/method</url-pattern>
+  </servlet-mapping>  <!-- http://localhost:9999/Lecture-Web/method -->
+  
+  
+  <servlet>
+  	<servlet-name>table</servlet-name>
+  	<servlet-class>kr.ac.kopo.servlet.TableServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>table</servlet-name>
+  	<url-pattern>/servlet/table</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <servlet>
+  	<servlet-name>pinfoResult</servlet-name>
+  	<servlet-class>kr.ac.kopo.servlet.InfoServlet</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>pinfoResult</servlet-name>
+  	<url-pattern>/pinfoResult</url-pattern>
+  </servlet-mapping>
+  
+  
+
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

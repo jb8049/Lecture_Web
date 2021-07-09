@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	
+	
+ #numberlist li{
+ 	float : left;
+ 	margin : 10px;
+ 	font-size: 16pt;
+ 	list-style-type: none;
+ }
+ /*li태그 중 첫 번째 태그*/
+ li:first-child {
+	color: green;
+}
+
+ li:last-child {
+	color: blue;
+}
+ /*짝수인 경우에 color 변경*/
+ li:nth-child(2n) {
+ 	color: orange;
+}
+ 
+ p {
+ 	clear: both ;
+ }
+ /*a에 링크가 걸려있으면 이라는 의미, 이런거를 가상 클래스라고 함*/
+ a:link {
+	color: black;
+	text-decoration: none;
+}
+ a:visited {
+	color: black;
+}
+ a:hover {
+	background-color: yellow;
+	text-decoration: underline;
+}
+
+ a:active {
+	color: pink;
+	font-weight: bold;
+}
+
+ p.text::first-letter {
+	font-size: 4em
+}
+
+ p.text::selection{
+ 	background-color: yellow
+ }
+
+ p.text::first-line{
+ 	text-decoration: underline;
+ }
+ 
+ /* h1은 네 번째로 나오는 자식, body태그 밑에 h1이 맨 처음 나오지 않음, h1의 first-child는  */
+ h1:first-child {
+	background-color: yellow;
+}
+ /*이렇게 해주어야함, 자식 중 가장 처음 h1을 변경*/
+ h1:first-of-type{
+ 	background-color : red;
+ }
+
+ h2:last-of-type {
+	color: blue;
+}
+
+ h3:only-of-type {
+	background-color: green;
+}
+
+  h2:only-child {
+	background-color: lightgray;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+	<ul id="numberlist">
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+		<li>six</li>
+		<li>seven</li>
+		<li>eight</li>
+		<li>nine</li>
+		<li>ten</li>
+	 </ul>
+		
+	 <!-- float의 속성이 아래의 p태그에도 영향을 미치고 있음, p태그에는 속성을 안미치게해야함 clear -->
+	 <p>
+	 	<a href="http://www.daum.net">DAUM</a>
+	 	<a href="http://www.naver.com">NAVER</a>
+	 </p>
+	 
+	 <p class="text">
+	 	ABCDEFGHIJK<br>
+	 	LMNOPQRST<br>
+	 	UVWXYZ<br>
+	 </p>
+	 <p class="text">
+	 	abcdefghijk<br>
+	 	lmnopqrst<br>
+	 	uvwxyz<br>
+	 </p>
+	 
+	 
+	 <h1>Header1</h1>
+	 <h3>Header3</h3>
+	 <h2>Header2-1</h2>
+	 <h4>Header4</h4>
+	 <h1>Header1</h1>
+	 <h2>Header2-2</h2>
+	 <h6>Header6</h6>
+	 
+	 <div>
+	 	<h2>Sub2</h2>
+	 	<h1>Sub1</h1>
+	 	<h1>Sub1-2</h1>
+	 	<h2>Sub2-2</h1>
+	 </div>
+
+</body>
+</html>
