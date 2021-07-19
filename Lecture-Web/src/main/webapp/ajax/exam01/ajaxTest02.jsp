@@ -16,7 +16,7 @@
 
 
 <script>
-
+	// 변경된 부분은 open에 가상URL 부분, HelloServlet 추가
 	let httpRequest = null
 	
 	function requestMsg(){
@@ -51,12 +51,13 @@
 			// 서버의 응답이 완료되었고, 상태가 '성공'인 경우(응답 결과가 올바른 경우)
 			if(httpRequest.status == 200 ){
 				
-				let msgView =document.getElementById("msgView");
+				let msgView = document.getElementById("msgView");
 				// innerHTML을 써줘야 태그를 인식할 수 있음
 				
 				msgView.innerHTML = httpRequest.responseText
 				// msgView.innerHTML += httpRequest.responseText
 				// 누를 때마다 붙일 수 있음
+				
 			}
 			
 		}
