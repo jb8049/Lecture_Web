@@ -6,16 +6,15 @@ if(request.getMethod().equals("POST"))
 %>
 [
 	{
-		id : 'hong'
-		name : '홍길동'
+		id: 'hong',
+		name: '홍길동'
 	},
 	{
-		id : 'kang',
-		name : '강길동'
+		id: 'kang',
+		name: '강길동'
 	},
 	{
-		id : 'park',
-		name : '박길동'
+		id: 'park',
+		name: '박길동'
 	}
-
 ]

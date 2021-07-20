@@ -15,7 +15,7 @@ function getXMLHttpRequest() {
 }
 
 // 사용자마다 달라지는 요소들
-// 메소드, 요청하는 url, 파라미터도 받아와야함, 콜백함수 필요함(서버상태 바뀔때마다!)
+// 메소드(방식), 요청하는 url, 파라미터도 받아와야함, 콜백함수 필요함(서버상태 바뀔때마다!)
 function sendProcess(method, url, params, callback) {
 	
 	httpRequest = getXMLHttpRequest()

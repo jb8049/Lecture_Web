@@ -16,7 +16,6 @@
 	function callback() {
 		
 		let msg = ''
-			// 서버의 상태가 4(서버에서 응답이 완료되었을 때) 일 때, 200(정상적으로 실행)일때만 관심이 있음
 		if(httpRequest.readyState == 4) {
 			if(httpRequest.status == 200) {
 				
@@ -25,26 +24,19 @@
 					httpRequest.responseXML.getElementsByTagName('member')[0].getElementsByTagName("id")
 				*/
 				
-				// sample.xml의 tag를 넣는다
 				let xmlDoc = httpRequest.responseXML
-				
-				// <member>태그 memberList에 저장
-				let memberList = xmlDoc.getElementsByTagName("member")
+				let memberList = $(xmlDoc).find('member')
 				msg += '회원수 : ' + memberList.length + '명\n'
+	
+				// memberList에는 3개의 <member> 태그가 들어있음
+				// 각각의 <member> 태그의 id, name이 필요함
 				
-				for(let i = 0; i < memberList.length; i++) {
+				memberList.each(function() {
+					let id = $(this).find('id').text()  // jQuery에서 value 뽑아내는 것
+					let name = $(this).find('name').text()
+					msg += id + "(" + name + ")\n"
+				})
 					
-					let mem = memberList[i]  // 각각의 <member> 태그가 가진 <id>, <name>에 접근하기 위함
-					
-					//console.log(id.innerHTML) //innerText는 안먹힘.. 
-					//console.log(id.firstChild.nodeValue) //이것도 가능함
-					
-					let id = mem.getElementsByTagName('id')[0].innerHTML
-					let name = mem.getElementsByTagName("name")[0].firstChild.nodeValue
-					
-					msg += id + '(' + name + ')\n'
-				}
-				
 				debugTrace(msg)
 			}
 		}

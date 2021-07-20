@@ -13,13 +13,13 @@
 		
 		// httpRequest = getXMLHttpRequest()
 		// alert(httpRequest)
-		
+
 		let name = document.inputForm.name.value
 		let age = document.inputForm.age.value
 		let addr = document.inputForm.addr.value
 		
 		// 비동기 통신
-		// 1단계
+		// 1단계, String 형식의 param
 		// sendProcess('POST','sample.jsp',"name=hong&age=24&addr=서울시 서초구",callback)
 		
 		// 2단계
@@ -29,8 +29,8 @@
 		// 3단계, JSON 형식으로 넘겨보자, data type이 object형임
 		//let params = { name : '홍순이', age : 30, addr : '경기도 광명시' }
 		
-		let params = { name : name, age : age, addr : addr }
-		sendProcess('GET','sample.jsp',params, callback)
+		let params = { name : name, age : age, addr : addr } // Object형으로 넘어감
+		sendProcess('GET','sample.jsp', params, callback)
 		
 	}
 	
@@ -99,5 +99,7 @@
 	<br>
 	<button type="button" onclick="clickBtn()">서버에 자료요청</button>
 	</form>
+	
+	 
 </body>
 </html>
