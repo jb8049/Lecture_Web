@@ -26,8 +26,9 @@
 		//let params = 'name=' + name + '&age=' + age + '&addr=' + addr
 		//sendProcess('GET',sample.jsp,params, callback )
 		
-		// 3단계, JSON 형식으로 넘겨보자
+		// 3단계, JSON 형식으로 넘겨보자, data type이 object형임
 		//let params = { name : '홍순이', age : 30, addr : '경기도 광명시' }
+		
 		let params = { name : name, age : age, addr : addr }
 		sendProcess('GET','sample.jsp',params, callback)
 		
@@ -95,6 +96,7 @@
 	이름 : <input type ="text" name = "name">
 	나이 : <input type ="text" name = "age">
 	주소 : <input type = "text" name ="addr">
+	<br>
 	<button type="button" onclick="clickBtn()">서버에 자료요청</button>
 	</form>
 </body>
