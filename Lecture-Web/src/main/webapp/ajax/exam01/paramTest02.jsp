@@ -42,7 +42,7 @@
 		
 		let url = 'param2.jsp'
 		param = encodeURIComponent(param)
-		let args = 'name' + param
+		let args = 'name=' + param
 		
 		if(method == 'GET'){
 			httpRequest.open(method, url + '?' + args, true)
@@ -116,6 +116,7 @@
 <body>
 	<form method="post" action="" enctype="application/x-www-form-urlencoded">
 	</form>
+	
 	<textarea rows="10" cols="80" id="debug"></textarea><br>
 	<button onclick="sendProcess('GET','hong gil-dong')">GET방식영문인자호출</button>
 	<button onclick="sendProcess('GET','홍길동')">GET방식한글인자호출</button>
