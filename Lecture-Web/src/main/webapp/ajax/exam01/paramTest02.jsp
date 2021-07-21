@@ -28,7 +28,7 @@
 	}
 	
 	
-	function sendProcess(method,param){ // name에 들어가는 param
+	function sendProcess(method, param){ // name에 들어가는 param
 		
 		httpRequest = getXMLHttpRequest()
 		
@@ -36,7 +36,7 @@
 		httpRequest.onreadystatechange = callbackFunction
 		
 		let msg = "===========================\n"
-		msg += method + "/Lecture-Web/exam02/param2.jsp?name=" + param + "\n"
+		msg += method + "/Lecture-Web/exam01/param2.jsp?name=" + param + "\n"
 		
 		debugTrace(msg)
 		
@@ -114,8 +114,8 @@
 
 </head>
 <body>
-	<form method="post" action="" enctype="application/x-www-form-urlencoded">
-	</form>
+	<!-- <form method="post" action="" enctype="application/x-www-form-urlencoded">
+	</form> -->
 	
 	<textarea rows="10" cols="80" id="debug"></textarea><br>
 	<button onclick="sendProcess('GET','hong gil-dong')">GET방식영문인자호출</button>

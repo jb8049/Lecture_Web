@@ -36,7 +36,7 @@
 		httpRequest.onreadystatechange = callbackFunction
 		
 		let msg = "===========================\n"
-		msg += "/Lecture-Web/exam02/param.js?name=" + param + "\n"
+		msg += "/Lecture-Web/exam01/param.jsp?name=" + param + "\n"
 		
 		debugTrace(msg)
 		
